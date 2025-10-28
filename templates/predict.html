@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Math Score Predictor</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            text-align: center;
+            margin-top: 100px;
+        }
+        
+        form {
+            background: white;
+            padding: 30px;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+        
+        input {
+            margin: 10px;
+            padding: 8px;
+            width: 200px;
+        }
+        
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+        }
+        
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Math Score Predictor</h2>
+    <form method="POST" action="/predict">
+        <input type="number" step="any" name="reading_score" placeholder="Reading Score" required><br>
+        <input type="number" step="any" name="writing_score" placeholder="Writing Score" required><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    <div class="result">{{ prediction_text }}</div>
+</body>
+
+</html>
